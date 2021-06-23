@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
                     Log.e(TAG, "Hit json exception", e);
                     e.printStackTrace();
                 }
-
             }
 
             @Override
