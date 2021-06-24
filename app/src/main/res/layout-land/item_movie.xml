@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="30dp">
+    android:layout_marginBottom="30dp"
+    android:background="@color/cardview_dark_background">
 
     <ImageView
         android:id="@+id/ivPoster"
+        
         android:layout_width="350dp"
-        android:layout_height="wrap_content"
+        android:maxHeight="120dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"  android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/title_txt"
@@ -26,7 +28,9 @@
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/ivPoster"
         android:textSize="24sp"
-        tools:text="The Conjuring: The Devil Made Me Do It" />
+        android:textColor="@color/white"
+        tools:text="The Conjuring: The Devil Made Me Do It"
+        />
 
     <TextView
         android:id="@+id/overview_txt"
@@ -35,6 +39,8 @@
         android:layout_below="@+id/title_txt"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
         android:layout_toEndOf="@+id/ivPoster"
+        android:textColor="@color/white"
         tools:text="Paranormal investigators Ed and Lorraine Warren encounter what would become one of the most sensational cases from their files. The fight for the soul of a young boy takes them beyond anything they'd ever seen before, to mark the first time in U.S. history that a murder suspect would claim demonic possession as a defense." />
 </RelativeLayout>
