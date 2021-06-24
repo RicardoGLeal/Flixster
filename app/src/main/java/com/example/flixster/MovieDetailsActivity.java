@@ -8,10 +8,12 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.flixster.Models.Movie;
+import com.example.flixster.databinding.ActivityMovieDetailsBinding;
 
 import org.parceler.Parcels;
 
 public class MovieDetailsActivity extends AppCompatActivity {
+    ActivityMovieDetailsBinding detailsBinding;
     //The movie to display
     Movie movie;
     TextView tvTitle;
@@ -21,12 +23,13 @@ public class MovieDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_movie_details);
+        detailsBinding = ActivityMovieDetailsBinding.inflate(getLayoutInflater());
+        setContentView(detailsBinding.getRoot());
 
         // resolve the view objects
-        tvTitle = (TextView) findViewById(R.id.tvTitle);
-        tvOverview = (TextView) findViewById(R.id.tvOverview);
-        rbVoteAverage = (RatingBar) findViewById(R.id.rbVoteAverage);
+        tvTitle = detailsBinding.tvTitle;
+        tvOverview = detailsBinding.tvOverview;
+        rbVoteAverage = detailsBinding.rbVoteAverage;
 
         //unwrap the movie passed in via intent, using its simple name as a key
         movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));
