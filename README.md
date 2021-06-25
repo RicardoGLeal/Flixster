@@ -42,7 +42,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='screenshots/portrait.gif' title='Video Walkthrough portrait' width='400' alt='Video Walkthrough1' />
+<img src='screenshots/portrait.gif' title='Video Walkthrough landscape' height='400' alt='Video Walkthrough2' />
 
 GIF created with [Kap](https://getkap.co/).
 
