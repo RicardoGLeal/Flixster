@@ -36,7 +36,7 @@ The following **additional** features are implemented:
 * Improve the design
 * Add animations
 * Display an activity with a map showing the theaters that are playing that movie.
-* Forced
+* Forced a Landscape mode in the MovieTrailerActivity.
 
 ## Video Walkthrough
 
