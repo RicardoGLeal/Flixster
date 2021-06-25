@@ -42,10 +42,12 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-*Portrait Mode:
+Portrait Mode:
+
 <img src='screenshots/Portrait.gif' title='Video Walkthrough portrait' width='400' alt='Video Walkthrough1' />
 
-*Landscape Mode:
+Landscape Mode:
+
 <img src='screenshots/Landscape.gif' title='Video Walkthrough landscape' height='400' alt='Video Walkthrough2' />
 
 GIF created with [Kap](https://getkap.co/).
