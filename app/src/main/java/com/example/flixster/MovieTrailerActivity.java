@@ -56,7 +56,7 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
                     videoKey = results.getJSONObject(1).getString("key");
 
                     // resolve the player view from the layout
-                    YouTubePlayerView playerView = (YouTubePlayerView) findViewById(R.id.player);
+                    YouTubePlayerView playerView = movieTrailerBinding.player;
                     // initialize with API key stored in secrets.xml
                     playerView.initialize(getString(R.string.youtube_api_key), new YouTubePlayer.OnInitializedListener() {
                         @Override
