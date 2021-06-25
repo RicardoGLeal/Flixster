@@ -31,6 +31,9 @@ public class MovieDetailsActivity extends AppCompatActivity {
         detailsBinding = ActivityMovieDetailsBinding.inflate(getLayoutInflater());
         setContentView(detailsBinding.getRoot());
 
+        //hides the action bar.
+        getSupportActionBar().hide();
+
         // resolve the view objects
         tvTitle = detailsBinding.tvTitle;
         tvOverview = detailsBinding.tvOverview;
