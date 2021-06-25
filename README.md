@@ -25,7 +25,8 @@ The following **stretch** features are implemented:
 The following **additional** features are implemented:
 
 * [X] The user can scroll in the movie details activity when it is in Landscape Mode.
-
+* [X] The user can see all the activities in Portrait Mode or Landscape mode (each one has its respective settings)
+* [X] The implemented texts are justified
 
 * [X] List anything else that you can get done to improve the app functionality!
 

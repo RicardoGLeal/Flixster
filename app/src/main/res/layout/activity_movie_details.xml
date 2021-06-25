@@ -43,8 +43,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_alignParentEnd="true"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:justificationMode="inter_word"/>
 
     <RatingBar
         android:id="@+id/rbVoteAverage"
