@@ -8,6 +8,7 @@ import android.util.Log;
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
 import com.example.flixster.Models.Movie;
+import com.example.flixster.databinding.ActivityMovieTrailerBinding;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -24,17 +25,24 @@ import okhttp3.Headers;
 
 public class MovieTrailerActivity extends YouTubeBaseActivity {
 
+    //URL of the API used to retrieve the videos of the movies.
+    //It is divided in to parts and then the movieID is placed between them.
     public static final String GET_VIDEOS_URL1 = "https://api.themoviedb.org/3/movie/";
     public static final String GET_VIDEOS_URL2 = "/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US";
     public String GET_VIDEOS_URL = "";
     String videoKey = "";
-
+    ActivityMovieTrailerBinding movieTrailerBinding; //View Binding feature
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_movie_trailer);
+        movieTrailerBinding = ActivityMovieTrailerBinding.inflate(getLayoutInflater());
+        setContentView(movieTrailerBinding.getRoot());
+        //setContentView(R.layout.activity_movie_trailer);
 
+        /*
+        1. Get the id passed by the intent that opened this Activity.
+         */
         int videoId = getIntent().getIntExtra("id",0);
         GET_VIDEOS_URL = GET_VIDEOS_URL1 + Integer.toString(videoId) + GET_VIDEOS_URL2;
         AsyncHttpClient client = new AsyncHttpClient();
@@ -47,14 +55,14 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
                     results = jsonObject.getJSONArray("results");
                     videoKey = results.getJSONObject(1).getString("key");
 
-                    // initialize with API key stored in secrets.xml
                     // resolve the player view from the layout
                     YouTubePlayerView playerView = (YouTubePlayerView) findViewById(R.id.player);
+                    // initialize with API key stored in secrets.xml
                     playerView.initialize(getString(R.string.youtube_api_key), new YouTubePlayer.OnInitializedListener() {
                         @Override
                         public void onInitializationSuccess(YouTubePlayer.Provider provider,
                                                             YouTubePlayer youTubePlayer, boolean b) {
-                            // do any work here to cue video, play video, etc.
+                            //Play the video
                             youTubePlayer.loadVideo(videoKey);
                         }
                         @Override

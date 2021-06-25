@@ -26,15 +26,15 @@ public class MainActivity extends AppCompatActivity {
     public static final String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
     public static final String TAG = "MainActivity";
     List<Movie> movies;
-    ActivityMainBinding activityMainBinding;
+    ActivityMainBinding activityMainBinding; //View Binding feature
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(activityMainBinding.getRoot());
+        activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater()); //View Binding feature
+        setContentView(activityMainBinding.getRoot()); //View Binding feature
 
-        RecyclerView movies_rv = activityMainBinding.moviesRv;
+        RecyclerView movies_rv = activityMainBinding.moviesRv; //Gets the movies_rv using the Binding feature
         movies = new ArrayList<>();
 
         //Create the adapter

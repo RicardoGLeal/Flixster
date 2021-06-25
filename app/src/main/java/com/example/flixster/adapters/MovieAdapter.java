@@ -25,11 +25,13 @@ import java.util.List;
 
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
+//Adapter of the RecyclerView used to show the list of the movies.
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
     Context context;
     List<Movie> movies;
 
+    //Constructor
     public MovieAdapter(Context context, List<Movie> movies) {
         this.context = context;
         this.movies = movies;
@@ -44,7 +46,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         return new ViewHolder(movieView);
     }
 
-    //Involves populating data into the item through holder
+    //Involves populating data into the item through holder.
     @Override
     public void onBindViewHolder(@NonNull @NotNull ViewHolder holder, int position) {
         Log.d("MovieAdapter", "onBindViewHolder" + position);
@@ -54,7 +56,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         holder.bind(movie);
     }
 
-    //Returns the total count of items in the List
+    //Returns the total count of items in the List.
     @Override
     public int getItemCount() {
         return movies.size();
@@ -75,6 +77,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             itemView.setOnClickListener(this);
         }
 
+        //Method called when the user clicks in a movie.
         @Override
         public void onClick(View v) {
             // gets item position
@@ -92,6 +95,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             }
         }
 
+        //binds into the view_layout the information obtained from the movie.
         public void bind(Movie movie) {
             title_txt.setText(movie.getTitle());
             overview_txt.setText(movie.getOverview());
@@ -110,6 +114,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             int radius = 30; // corner radius, higher value = more rounded
             int margin = 10; // crop margin, set to 0 for corners with no crop
 
+            //Glide dependency is implemented to load the image of every movie. It also incorporates
+            //a placeholder and rounderCorners.
             Glide.with(context)
                     .load(imageUrl)
                     .placeholder(placeholder)
