@@ -29,6 +29,7 @@ The following **additional** features are implemented:
 * [X] Forced landscape mode in the Movie Trailer.
 * [X] Action Bar removed in Movie Details Activity.
 * [X] The implemented texts are justified
+* [X] Forced a Landscape mode in the MovieTrailerActivity.
 
 * [X] List anything else that you can get done to improve the app functionality!
 
@@ -36,7 +37,6 @@ The following **additional** features are implemented:
 * Improve the design
 * Add animations
 * Display an activity with a map showing the theaters that are playing that movie.
-* Forced a Landscape mode in the MovieTrailerActivity.
 
 ## Video Walkthrough
 
