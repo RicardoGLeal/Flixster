@@ -29,7 +29,7 @@ The following **additional** features are implemented:
 * [X] Forced landscape mode in the Movie Trailer.
 * [X] Action Bar removed in Movie Details Activity.
 * [X] The implemented texts are justified
-* [X] Forced a Landscape mode in the MovieTrailerActivity.
+* [X] Forced the Landscape mode in the MovieTrailerActivity.
 
 * [X] List anything else that you can get done to improve the app functionality!
 
